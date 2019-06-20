@@ -18,7 +18,7 @@ class CreateFileAttachmentsTable extends Migration
             $table->morphs('attachable');
             $table->string('title');
             $table->string('path');
-            $table->enum('file_type', ['image', 'zip', 'pdf']);
+            // $table->enum('file_type', ['image', 'zip', 'pdf']);
             $table->timestamps();
         });
     }

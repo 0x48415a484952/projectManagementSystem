@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->unsignedBigInteger('project_id');
             $table->string('title');
             $table->text('description');
-            $table->date('deadline_date');
+            $table->timestamp('date_deadline')->nullable();
             $table->enum('status', ['todo', 'doing', 'done']);
             $table->timestamps();
 

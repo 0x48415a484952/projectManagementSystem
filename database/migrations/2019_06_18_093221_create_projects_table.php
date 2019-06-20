@@ -17,9 +17,9 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title')->unique();
             $table->unsignedBigInteger('customer_id');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->date('delivery_date');
+            $table->date('date_start');
+            $table->date('date_end');
+            $table->date('date_delivery');
             $table->timestamp('free_support_at');
             $table->text('description')->nullable();
             $table->enum('status', ['todo', 'doing', 'done']);
